@@ -7,9 +7,9 @@ function getInitials(nomeCompleto) {
 }
 
 
-// Snack n°2 "createSlug"
+// Snack n°2 / snack n°4 "createSlug"
 function createSlug(slug) {
-    return slug.toLowerCase()
+    return slug.toLowerCase().split(" ").join("-")
 }
 
 
