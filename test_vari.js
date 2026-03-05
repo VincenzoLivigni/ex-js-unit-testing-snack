@@ -32,9 +32,29 @@ function isPalindrome(stringa) {
     return stringa === stringa.split('').reverse().join('')
 }
 
+
+function findPostById(posts, id) {
+
+    if (isNaN(id)) {
+        throw new Error("Errore, l'id del post non ha un valore numerico")
+    }
+
+    posts.forEach((p) => {
+        if (p.id === undefined ||
+            p.title === undefined ||
+            p.slug === undefined
+        ) {
+            throw new Error("Errore, il post deve contenere id, titolo e slug");
+        }
+    })
+
+    return posts.find((p) => p.id === id)
+}
+
 module.exports = {
     getInitials,
     createSlug,
     average,
-    isPalindrome
+    isPalindrome,
+    findPostById
 }
