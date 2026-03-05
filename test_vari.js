@@ -7,8 +7,16 @@ function getInitials(nomeCompleto) {
 }
 
 
-// Snack n°2 / snack n°4 "createSlug"
+// Snack n°2 / snack n°4 / snack n°6 "createSlug"
 function createSlug(slug) {
+
+    if (slug === "") {
+        throw new Error("Errore, il titolo è vuoto")
+    }
+    if (slug === null) {
+        throw new Error("Errore, il titolo non è valido")
+    }
+
     return slug.toLowerCase().split(" ").join("-")
 }
 
