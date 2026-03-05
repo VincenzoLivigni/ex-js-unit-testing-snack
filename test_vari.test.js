@@ -1,7 +1,8 @@
 const {
     getInitials,
     createSlug,
-    average
+    average,
+    isPalindrome
 } = require("./test_vari.js")
 
 // Snack 1
@@ -35,4 +36,12 @@ test('La funzione "average" calcola la media aritmetica di un array di numeri', 
 // "La funzione createSlug sostituisce gli spazi con -."
 test('La funzione "createSlug" sostituisce gli spazi con -', () => {
     expect(createSlug("STUDIANDO JAVASCRIPT")).toBe("studiando-javascript")
+})
+
+
+// Snack 5
+// Creare un test che verifichi la seguente descrizione:
+// "La funzione isPalindrome verifica se una stringa è un palindromo."
+test('La funzione "isPalindrome" verifica se una stringa è un palindromo', () => {
+    expect(isPalindrome("otto")).toBeTruthy()
 })
