@@ -28,11 +28,12 @@ function average(nums) {
 }
 
 
+// Snack n°5 "isPalindrome"
 function isPalindrome(stringa) {
     return stringa === stringa.split('').reverse().join('')
 }
 
-
+// Snack n°7 "findPostById"
 function findPostById(posts, id) {
 
     if (isNaN(id)) {
