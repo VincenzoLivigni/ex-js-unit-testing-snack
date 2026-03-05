@@ -1,6 +1,7 @@
 const {
     getInitials,
-    createSlug
+    createSlug,
+    average
 } = require("./test_vari.js")
 
 // Snack 1
@@ -18,4 +19,12 @@ test('La funzione "getInitials" restituisce le iniziali di un nome completo', ()
 
 test('La funzione "createSlug" restituisce una stringa in lowercase', () => {
     expect(createSlug("JAVASCRIPT")).toBe("javascript")
+})
+
+
+// Snack 3
+// Creare un test che verifichi la seguente descrizione:
+// "La funzione average calcola la media aritmetica di un array di numeri."
+test('La funzione "average" calcola la media aritmetica di un array di numeri', () => {
+    expect(average([12, 26, 6, 4, 2])).toBe(10)
 })

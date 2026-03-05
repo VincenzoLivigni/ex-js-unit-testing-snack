@@ -12,7 +12,15 @@ function createSlug(slug) {
     return slug.toLowerCase()
 }
 
+
+// Snack n°3 "average"
+function average(nums) {
+    return nums.reduce((acc, n) => acc + n, 0) / nums.length
+
+}
+
 module.exports = {
     getInitials,
-    createSlug
+    createSlug,
+    average
 }
